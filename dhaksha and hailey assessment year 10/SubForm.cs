@@ -61,6 +61,11 @@ namespace dhaksha_and_hailey_assessment_year_10
             t.Tick +=timer_Tick();
         }
 
+        private EventHandler timer_Tick()
+        {
+
+        }
+
         private void subbutton1_Click(object sender, EventArgs e) 
         {
             if (buttonFunc == 0) //start game
