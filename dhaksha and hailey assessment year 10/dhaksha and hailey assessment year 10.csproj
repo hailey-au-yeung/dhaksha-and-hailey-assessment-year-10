@@ -61,6 +61,12 @@
     <Compile Include="DivForm.designer.cs">
       <DependentUpon>DivForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MultForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultForm.designer.cs">
+      <DependentUpon>MultForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Index.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +77,9 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="NumberBoxes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="picture.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Program.cs" />
@@ -89,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DivForm.resx">
       <DependentUpon>DivForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultForm.resx">
+      <DependentUpon>MultForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Index.resx">
       <DependentUpon>Index.cs</DependentUpon>
@@ -148,6 +160,75 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Bunny Hop-YoutubeConvert.cc.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right answer.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birdfinalpic - Copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birdfinalpic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birdpic1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birdpic2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birdpic3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birdpic4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birdpic5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birdpic6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birdpic7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birdpic8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birdpic9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\finalpic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pic9.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
