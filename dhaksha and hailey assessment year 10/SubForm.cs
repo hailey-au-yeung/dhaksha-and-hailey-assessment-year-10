@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -54,6 +55,10 @@ namespace dhaksha_and_hailey_assessment_year_10
             subtextBox1.Visible = false;
             subbutton1.Visible = true;
             sublabel1.Text = "";
+            System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
+            t.Interval = 1000;
+            t.Enabled = false;
+            t.Tick +=timer_Tick();
         }
 
         private void subbutton1_Click(object sender, EventArgs e) 

@@ -42,10 +42,10 @@
             // subnumber1
             // 
             this.subnumber1.AutoSize = true;
-            this.subnumber1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subnumber1.Font = new System.Drawing.Font("Kristen ITC", 19.875F, System.Drawing.FontStyle.Underline);
             this.subnumber1.Location = new System.Drawing.Point(138, 265);
             this.subnumber1.Name = "subnumber1";
-            this.subnumber1.Size = new System.Drawing.Size(97, 61);
+            this.subnumber1.Size = new System.Drawing.Size(112, 74);
             this.subnumber1.TabIndex = 0;
             this.subnumber1.Text = "     ";
             // 
@@ -62,10 +62,10 @@
             // subnumber2
             // 
             this.subnumber2.AutoSize = true;
-            this.subnumber2.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.875F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.subnumber2.Font = new System.Drawing.Font("Kristen ITC", 19.875F, System.Drawing.FontStyle.Underline);
             this.subnumber2.Location = new System.Drawing.Point(394, 261);
             this.subnumber2.Name = "subnumber2";
-            this.subnumber2.Size = new System.Drawing.Size(97, 61);
+            this.subnumber2.Size = new System.Drawing.Size(112, 74);
             this.subnumber2.TabIndex = 2;
             this.subnumber2.Text = "     ";
             // 
@@ -82,7 +82,7 @@
             // subbutton1
             // 
             this.subbutton1.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.subbutton1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.subbutton1.Font = new System.Drawing.Font("Kristen ITC", 10F);
             this.subbutton1.Location = new System.Drawing.Point(862, 265);
             this.subbutton1.Name = "subbutton1";
             this.subbutton1.Size = new System.Drawing.Size(222, 67);
@@ -103,27 +103,27 @@
             // sublabel1
             // 
             this.sublabel1.AutoSize = true;
-            this.sublabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sublabel1.Location = new System.Drawing.Point(1161, 510);
+            this.sublabel1.Font = new System.Drawing.Font("Kristen ITC", 7.875F, System.Drawing.FontStyle.Bold);
+            this.sublabel1.Location = new System.Drawing.Point(1144, 517);
             this.sublabel1.Name = "sublabel1";
-            this.sublabel1.Size = new System.Drawing.Size(96, 25);
+            this.sublabel1.Size = new System.Drawing.Size(110, 29);
             this.sublabel1.TabIndex = 7;
             this.sublabel1.Text = "Correct!";
             // 
             // sublabel3
             // 
             this.sublabel3.AutoSize = true;
-            this.sublabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.sublabel3.Location = new System.Drawing.Point(361, 282);
+            this.sublabel3.Font = new System.Drawing.Font("Kristen ITC", 13F);
+            this.sublabel3.Location = new System.Drawing.Point(348, 284);
             this.sublabel3.Name = "sublabel3";
-            this.sublabel3.Size = new System.Drawing.Size(287, 39);
+            this.sublabel3.Size = new System.Drawing.Size(347, 47);
             this.sublabel3.TabIndex = 8;
             this.sublabel3.Text = "click the button to";
             // 
             // subbutton2
             // 
             this.subbutton2.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.subbutton2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.subbutton2.Font = new System.Drawing.Font("Kristen ITC", 10F);
             this.subbutton2.Location = new System.Drawing.Point(19, 501);
             this.subbutton2.Name = "subbutton2";
             this.subbutton2.Size = new System.Drawing.Size(199, 59);
