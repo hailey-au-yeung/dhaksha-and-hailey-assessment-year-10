@@ -47,7 +47,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(509, 150);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Gnome";
+            this.button1.Text = "Mushroom Madness";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -59,7 +59,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(512, 150);
             this.button2.TabIndex = 1;
-            this.button2.Text = "Flower Garden";
+            this.button2.Text = "Flowering Fractions";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -91,8 +91,9 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(509, 150);
             this.button3.TabIndex = 4;
-            this.button3.Text = "Bunny Hop Race";
+            this.button3.Text = "Bunny Bop";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 

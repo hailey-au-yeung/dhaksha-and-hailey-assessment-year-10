@@ -46,6 +46,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddForm.designer.cs">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bunny.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DivForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +84,9 @@
     <Compile Include="SubForm.designer.cs">
       <DependentUpon>SubForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddForm.resx">
+      <DependentUpon>AddForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DivForm.resx">
       <DependentUpon>DivForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,9 +117,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\smilingGnome.png" />
   </ItemGroup>
   <ItemGroup>
@@ -130,6 +139,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\popSound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bunny1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bunny2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bunny Hop-YoutubeConvert.cc.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

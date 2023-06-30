@@ -14,6 +14,7 @@ namespace dhaksha_and_hailey_assessment_year_10
     {
         SubForm subForm = new SubForm();
         DivForm divForm = new DivForm();
+        AddForm addForm = new AddForm();
         public Index()
         {
             InitializeComponent();
@@ -33,6 +34,12 @@ namespace dhaksha_and_hailey_assessment_year_10
         private void button2_Click(object sender, EventArgs e)
         {
             divForm.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            addForm.Show();
+
         }
     }
 }
