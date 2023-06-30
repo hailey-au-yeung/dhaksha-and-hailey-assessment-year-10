@@ -15,6 +15,7 @@ namespace dhaksha_and_hailey_assessment_year_10
         SubForm subForm = new SubForm();
         DivForm divForm = new DivForm();
         AddForm addForm = new AddForm();
+        MultForm multForm = new MultForm();
         public Index()
         {
             InitializeComponent();
@@ -29,17 +30,26 @@ namespace dhaksha_and_hailey_assessment_year_10
         {
             
             subForm.Show();
+            this.Hide();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            divForm.ShowDialog();
+            divForm.Show();
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             addForm.Show();
+            this.Hide();
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            multForm.Show();
+            this.Hide();
         }
     }
 }
