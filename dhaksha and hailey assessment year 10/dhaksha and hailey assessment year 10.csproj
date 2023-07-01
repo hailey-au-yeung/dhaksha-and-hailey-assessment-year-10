@@ -248,5 +248,15 @@
   <ItemGroup>
     <None Include="Resources\pic9.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\dbusers.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\dbusers.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
