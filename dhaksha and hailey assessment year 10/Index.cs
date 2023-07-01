@@ -28,28 +28,30 @@ namespace dhaksha_and_hailey_assessment_year_10
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            subForm.Show();
             this.Hide();
+            subForm.ShowDialog();
+            this.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            divForm.Show();
             this.Hide();
+            divForm.ShowDialog();
+            this.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            addForm.Show();
             this.Hide();
-
+            addForm.ShowDialog();
+            this.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            multForm.Show();
             this.Hide();
+            multForm.ShowDialog();
+            this.Show();
         }
     }
 }

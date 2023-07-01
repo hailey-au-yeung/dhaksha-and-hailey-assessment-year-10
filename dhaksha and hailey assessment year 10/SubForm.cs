@@ -13,10 +13,6 @@ namespace dhaksha_and_hailey_assessment_year_10
 {
     public partial class SubForm : Form
     {
-        public SubForm()
-        {
-            InitializeComponent();
-        }
         Random rnd = new Random();
 
         int buttonFunc = 0;
@@ -25,9 +21,9 @@ namespace dhaksha_and_hailey_assessment_year_10
 
         int count = 0;
 
-        int time = 0;
-
         System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
+
+        int time = 0;
 
         System.Media.SoundPlayer pop = new System.Media.SoundPlayer(Properties.Resources.popSound);
         System.Media.SoundPlayer cheer = new System.Media.SoundPlayer(Properties.Resources.cheeringSound);
@@ -44,7 +40,12 @@ namespace dhaksha_and_hailey_assessment_year_10
             new mushroom(8), //8
         };
 
-        private void SubForm_Load(object sender, EventArgs e) //setup screen
+        public SubForm()
+        {
+            InitializeComponent();
+        }
+
+        private void SubForm_Load(object sender, EventArgs e) //setup screen and make everything invisible
         {
             foreach (PictureBox mush in mushrooms)
             {
@@ -58,7 +59,10 @@ namespace dhaksha_and_hailey_assessment_year_10
             sublabel4.Visible = false;
             subtextBox1.Visible = false;
             subbutton1.Visible = true;
-            sublabel1.Text = "";            
+            label1.Visible = false;
+            sublabel1.Text = "";  
+            
+            //set up timer
             t.Interval = 1000;
             t.Enabled = false;
             t.Tick += timer_Tick;
@@ -74,6 +78,7 @@ namespace dhaksha_and_hailey_assessment_year_10
         {
             if (buttonFunc == 0) //start game
             {
+                //make everything visible 
                 subnumber1.Visible = true;
                 subnumber2.Visible = true;
                 sublabel2.Visible = true;
@@ -160,9 +165,14 @@ namespace dhaksha_and_hailey_assessment_year_10
             }
         }
 
-        private void subbutton2_Click(object sender, EventArgs e)
+        private void subbutton2_Click(object sender, EventArgs e) //home button
         {
-            this.Close();
+           this.Close(); //go back to home screen
+        }
+
+        private void button1_Click(object sender, EventArgs e) //play again button
+        {
+
         }
     }
 }

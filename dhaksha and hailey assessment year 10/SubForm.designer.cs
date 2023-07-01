@@ -137,10 +137,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Kristen ITC", 12F);
+            this.label1.Font = new System.Drawing.Font("Kristen ITC", 15F);
+            this.label1.ForeColor = System.Drawing.Color.IndianRed;
             this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 44);
+            this.label1.Size = new System.Drawing.Size(77, 54);
             this.label1.TabIndex = 10;
             this.label1.Text = "0 s";
             // 
@@ -154,6 +155,7 @@
             this.button1.TabIndex = 11;
             this.button1.Text = "play again";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // SubForm
             // 
