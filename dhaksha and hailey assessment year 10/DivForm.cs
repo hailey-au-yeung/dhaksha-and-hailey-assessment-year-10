@@ -163,8 +163,10 @@ namespace dhaksha_and_hailey_assessment_year_10
                 questionNo = 1;
                 divlabel3.Text = "";
                 divlabel2.Visible = false;
+                label1.Visible = true;
 
                 MyGlobals.Score = MyGlobals.Score + score;
+                label1.Text = Convert.ToString(score);
                 Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                 Properties.Settings.Default.Save();
             }
@@ -205,6 +207,7 @@ namespace dhaksha_and_hailey_assessment_year_10
             func = 1;
             divlabel4.Text = "press the flowers to show the fraction\rclick the button to start!";
             divlabel2.Visible = false;
+            label1.Visible = false;
         }
 
         

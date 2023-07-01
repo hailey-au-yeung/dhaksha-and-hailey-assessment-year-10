@@ -24,7 +24,6 @@ namespace dhaksha_and_hailey_assessment_year_10
         System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
 
         int time = 0;
-
        
 
         System.Media.SoundPlayer pop = new System.Media.SoundPlayer(Properties.Resources.popSound);
@@ -61,6 +60,7 @@ namespace dhaksha_and_hailey_assessment_year_10
             sublabel4.Visible = false;
             subtextBox1.Visible = false;
             subbutton1.Visible = true;
+            label1.Visible = false;
 
 
             Controls.Add(timelabel);
@@ -183,42 +183,49 @@ namespace dhaksha_and_hailey_assessment_year_10
                 subbutton1.Visible = false;
                 subbutton2.Visible = true;
                 sublabel3.Visible = true;
+                label1.Visible = true;
                 t.Enabled = false;
                 cheer.Play();
                 sublabel3.Text = "Well done! You've finished with a time of " + Convert.ToString(time) + "seconds!";
                 if (time > 0 && time < 11)
                 {
                     MyGlobals.Score = MyGlobals.Score + 10;
+                    label1.Text = "+10 Points";
                     Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                     Properties.Settings.Default.Save();
                 }
                 else if (time > 10 && time < 16)
                 {
                     MyGlobals.Score = MyGlobals.Score + 7;
+                    label1.Text = "+7 Points";
                     Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                     Properties.Settings.Default.Save();
                 }
                 else if (time > 15 && time < 21)
                 {
                     MyGlobals.Score = MyGlobals.Score + 5;
+                    label1.Text = "+5 Points";
                     Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                     Properties.Settings.Default.Save();
                 }
                 else if (time > 20 && time < 26)
                 {
                     MyGlobals.Score = MyGlobals.Score + 3;
+                    label1.Text = "+3 Points";
                     Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                     Properties.Settings.Default.Save();
                 }
                 else if (time > 25 && time < 31)
                 {
                     MyGlobals.Score = MyGlobals.Score + 2;
+                    label1.Text = "+2 Points";
                     Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                     Properties.Settings.Default.Save();
                 }
                 else
                 {
                     MyGlobals.Score = MyGlobals.Score + 1;
+                    label1.Text = "+1 Points";
                     Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                     Properties.Settings.Default.Save();
 
@@ -232,29 +239,7 @@ namespace dhaksha_and_hailey_assessment_year_10
             Index index = new Index();
             index.Show();
             this.Hide();
-        }
-
-        private void button1_Click(object sender, EventArgs e) //play again button
-        {
-            //sets screen back up to beginning
-            foreach (PictureBox mush in mushrooms)
-            {
-                mush.Visible = false;
-                mush.Image = Properties.Resources.mushroom;
-            }
-            subnumber1.Visible = false;
-            subnumber2.Visible = false;
-            sublabel2.Visible = false;
-            sublabel4.Visible = false;
-            subtextBox1.Visible = false;
-            subbutton1.Visible = true;
-            timelabel.Visible = false;
-            sublabel1.Text = "";
-            time = 0;
-            subbutton1.Text = "start";
-            buttonFunc = 0;
-            sublabel3.Text = "click the button to";
-        }
+        }       
         
     }
 }

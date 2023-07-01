@@ -33,6 +33,7 @@
             this.divlabel3 = new System.Windows.Forms.Label();
             this.divlabel4 = new System.Windows.Forms.Label();
             this.divlabel5 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // divbutton1
@@ -91,11 +92,23 @@
             this.divlabel5.TabIndex = 6;
             this.divlabel5.Text = " ";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Kristen ITC", 16F);
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(562, 350);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(229, 58);
+            this.label1.TabIndex = 7;
+            this.label1.Text = " +1 Points";
+            // 
             // DivForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1289, 573);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.divlabel5);
             this.Controls.Add(this.divlabel4);
             this.Controls.Add(this.divlabel3);
@@ -117,6 +130,7 @@
         private System.Windows.Forms.Label divlabel3;
         private System.Windows.Forms.Label divlabel4;
         private System.Windows.Forms.Label divlabel5;
+        private System.Windows.Forms.Label label1;
     }
 }
 
