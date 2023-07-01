@@ -211,7 +211,7 @@ namespace dhaksha_and_hailey_assessment_year_10
         private void restartbutton_Click(object sender, EventArgs e)
         {
             Index index = new Index();
-             index.Show(); // restart application
+            index.Show();
             this.Hide();
         } 
 
@@ -219,12 +219,13 @@ namespace dhaksha_and_hailey_assessment_year_10
         {
             if (e.KeyCode == Keys.Enter) {
                 checkanswer();
+                e.SuppressKeyPress = true;
             }     //to make enter key work to submit answer
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            decidingno = rnd.Next(1, 3);
+            decidingno = rnd.Next(1, 3); //randomly decides num
         }
 
         private void lblhoverinst_MouseHover(object sender, EventArgs e)
@@ -237,7 +238,7 @@ namespace dhaksha_and_hailey_assessment_year_10
 
         private void lblhoverinst_MouseLeave(object sender, EventArgs e)
         {
-            lblhoverinst.Text = "Hover for Instructions";
+            lblhoverinst.Text = "Hover for Instructions"; //hovering feature
         }
     }
     }

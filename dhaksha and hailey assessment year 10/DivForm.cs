@@ -64,7 +64,7 @@ namespace dhaksha_and_hailey_assessment_year_10
                     index.Show();
                     this.Hide();
 
-                }
+                }   
                 else if (func == 1) //make new question and reset boxes to gray
                 {
                     //reset boxes and labels
@@ -158,7 +158,7 @@ namespace dhaksha_and_hailey_assessment_year_10
                 }
                 divlabel4.Text = "Congratulations! You have finished with a score of " + Convert.ToString(score) + "/10";
                 func = 0;
-                divbutton1.Text = "play again";
+                divbutton1.Text = "Home";
                 questionNo = 1;
                 divlabel3.Text = "";
                 divlabel2.Visible = false;

@@ -102,6 +102,7 @@
             this.Controls.Add(this.divlabel2);
             this.Controls.Add(this.divbutton1);
             this.Name = "DivForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DivForm";
             this.Load += new System.EventHandler(this.DivForm_Load);
             this.ResumeLayout(false);

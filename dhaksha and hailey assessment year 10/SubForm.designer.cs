@@ -174,6 +174,7 @@
             this.Controls.Add(this.sublabel2);
             this.Controls.Add(this.subnumber1);
             this.Name = "SubForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SubForm";
             this.Load += new System.EventHandler(this.SubForm_Load);
             this.ResumeLayout(false);

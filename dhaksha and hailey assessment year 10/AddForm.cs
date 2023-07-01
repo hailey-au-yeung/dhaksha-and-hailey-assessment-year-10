@@ -92,7 +92,9 @@ namespace dhaksha_and_hailey_assessment_year_10
 
         private void restartbutton_Click(object sender, EventArgs e)
         {
-            this.Close();  //goes back to index
+            Index index = new Index();
+            index.Show();
+            this.Hide();
         }
         
         private void checkanswer()
@@ -119,7 +121,7 @@ namespace dhaksha_and_hailey_assessment_year_10
                 }
                 else
                 {
-                    mybunny.Location = new Point(locx + y, 300); // moving car when answewr is correct
+                    mybunny.Location = new Point(locx + y, 300); // moving bunny when answewr is correct
                     SoundPlayer hop = new SoundPlayer(Properties.Resources.BunnyHop);
                     hop.Play();
 
@@ -154,7 +156,7 @@ namespace dhaksha_and_hailey_assessment_year_10
             }
             else
             {
-                Mybunny.Location = new Point(locx2 + x, 400); //moving second car always
+                Mybunny.Location = new Point(locx2 + x, 400); //moving second bunny always
                 
 
 
@@ -170,16 +172,17 @@ namespace dhaksha_and_hailey_assessment_year_10
             if (e.KeyCode == Keys.Enter)
             {
                 checkanswer();
+                e.SuppressKeyPress = true;
 
             }     //to make enter key work to submit answer
         }
 
         private void lblhoverinst_MouseHover(object sender, EventArgs e)
         {
-            lblhoverinst.Text = "How To Play: Answer the question right to make your bunnt hops along a spot. " +
+            lblhoverinst.Text = "How To Play: Answer the question right to make your bunny hops along a spot. " +
                 "Your bunny is the one on the top! Beat the other bunny to the finish line in the race!";
             lblhoverinst.MaximumSize = new Size(300, 0);
-            lblhoverinst.AutoSize = true;
+            lblhoverinst.AutoSize = true; //wraps textr
         }
 
         private void lblhoverinst_MouseLeave(object sender, EventArgs e)
@@ -195,7 +198,7 @@ namespace dhaksha_and_hailey_assessment_year_10
         }
         private void mybunny_MouseLeave(object sender, EventArgs e)
         {
-            lblhoverbunnies.Text = "Hover Over the Bunnies!";
+            lblhoverbunnies.Text = "Hover Over the Bunnies!"; //hovering effectr
         }
         private void Mybunny_MouseHover(object sender, EventArgs e)
         {

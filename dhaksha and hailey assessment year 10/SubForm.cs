@@ -172,7 +172,9 @@ namespace dhaksha_and_hailey_assessment_year_10
 
         private void subbutton2_Click(object sender, EventArgs e) //home button
         {
-           this.Close(); //go back to home screen
+          Index index = new Index();
+            index.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e) //play again button
