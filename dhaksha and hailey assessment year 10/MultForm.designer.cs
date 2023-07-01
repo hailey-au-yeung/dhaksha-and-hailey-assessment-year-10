@@ -137,7 +137,7 @@
             this.restartbutton.Name = "restartbutton";
             this.restartbutton.Size = new System.Drawing.Size(198, 92);
             this.restartbutton.TabIndex = 11;
-            this.restartbutton.Text = "Restart";
+            this.restartbutton.Text = "Home";
             this.restartbutton.UseVisualStyleBackColor = false;
             this.restartbutton.Click += new System.EventHandler(this.restartbutton_Click);
             // 
@@ -153,7 +153,7 @@
             this.lblhoverinst.MouseLeave += new System.EventHandler(this.lblhoverinst_MouseLeave);
             this.lblhoverinst.MouseHover += new System.EventHandler(this.lblhoverinst_MouseHover);
             // 
-            // Form1
+            // MultForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
@@ -169,7 +169,7 @@
             this.Controls.Add(this.lblnumA);
             this.Controls.Add(this.lblscore);
             this.Font = new System.Drawing.Font("Kristen ITC", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "Form1";
+            this.Name = "MultForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

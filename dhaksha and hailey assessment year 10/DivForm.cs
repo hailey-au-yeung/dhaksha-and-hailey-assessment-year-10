@@ -60,7 +60,9 @@ namespace dhaksha_and_hailey_assessment_year_10
             {
                 if (func==0)
                 {
-                    Application.Restart();
+                    Index index = new Index();
+                    index.Show();
+                    this.Hide();
 
                 }
                 else if (func == 1) //make new question and reset boxes to gray

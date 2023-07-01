@@ -41,11 +41,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblhoverbunnies = new System.Windows.Forms.Label();
             this.lblhoverinst = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblScore
@@ -158,7 +154,7 @@
             // 
             this.lblhoverbunnies.AutoSize = true;
             this.lblhoverbunnies.Font = new System.Drawing.Font("Kristen ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhoverbunnies.Location = new System.Drawing.Point(20, 26);
+            this.lblhoverbunnies.Location = new System.Drawing.Point(924, 260);
             this.lblhoverbunnies.Name = "lblhoverbunnies";
             this.lblhoverbunnies.Size = new System.Drawing.Size(481, 52);
             this.lblhoverbunnies.TabIndex = 11;
@@ -168,7 +164,7 @@
             // 
             this.lblhoverinst.AutoSize = true;
             this.lblhoverinst.Font = new System.Drawing.Font("Kristen ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhoverinst.Location = new System.Drawing.Point(21, 28);
+            this.lblhoverinst.Location = new System.Drawing.Point(924, 35);
             this.lblhoverinst.Name = "lblhoverinst";
             this.lblhoverinst.Size = new System.Drawing.Size(457, 52);
             this.lblhoverinst.TabIndex = 10;
@@ -176,32 +172,14 @@
             this.lblhoverinst.MouseLeave += new System.EventHandler(this.lblhoverinst_MouseLeave);
             this.lblhoverinst.MouseHover += new System.EventHandler(this.lblhoverinst_MouseHover);
             // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(101)))), ((int)(((byte)(73)))));
-            this.panel1.Controls.Add(this.lblhoverinst);
-            this.panel1.Location = new System.Drawing.Point(920, 7);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(315, 196);
-            this.panel1.TabIndex = 12;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(101)))), ((int)(((byte)(73)))));
-            this.panel2.Controls.Add(this.lblhoverbunnies);
-            this.panel2.Location = new System.Drawing.Point(921, 224);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(314, 191);
-            this.panel2.TabIndex = 13;
-            // 
             // AddForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(1249, 667);
+            this.Controls.Add(this.lblhoverbunnies);
+            this.Controls.Add(this.lblhoverinst);
             this.Controls.Add(this.restartbutton);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtAnswer);
@@ -218,10 +196,6 @@
             this.Text = "Maths Addition Game";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,8 +215,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblhoverbunnies;
         private System.Windows.Forms.Label lblhoverinst;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
     }
 }
 

@@ -210,7 +210,9 @@ namespace dhaksha_and_hailey_assessment_year_10
 
         private void restartbutton_Click(object sender, EventArgs e)
         {
-             Application.Restart(); // restart application
+            Index index = new Index();
+             index.Show(); // restart application
+            this.Hide();
         } 
 
         private void txtAnswer_KeyDown(object sender, KeyEventArgs e)
