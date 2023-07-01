@@ -61,12 +61,6 @@
     <Compile Include="DivForm.designer.cs">
       <DependentUpon>DivForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="LoginForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginForm.designer.cs">
-      <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MultForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,12 +87,6 @@
     <Compile Include="questionNos.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="SignupForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SignupForm.designer.cs">
-      <DependentUpon>SignupForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="SubForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,9 +98,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DivForm.resx">
       <DependentUpon>DivForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MultForm.resx">
       <DependentUpon>MultForm.cs</DependentUpon>
@@ -130,12 +115,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SignupForm.resx">
-      <DependentUpon>SignupForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="SubForm.resx">
       <DependentUpon>SubForm.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -249,14 +232,10 @@
     <None Include="Resources\pic9.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="bin\Debug\dbusers.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </EmbeddedResource>
+    <Content Include="XMLFile1.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AdditionalFiles Include="bin\Debug\dbusers.mdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </AdditionalFiles>
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

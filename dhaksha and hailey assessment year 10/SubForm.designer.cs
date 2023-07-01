@@ -37,7 +37,6 @@
             this.sublabel1 = new System.Windows.Forms.Label();
             this.sublabel3 = new System.Windows.Forms.Label();
             this.subbutton2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -134,17 +133,6 @@
             this.subbutton2.UseVisualStyleBackColor = false;
             this.subbutton2.Click += new System.EventHandler(this.subbutton2_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Kristen ITC", 15F);
-            this.label1.ForeColor = System.Drawing.Color.IndianRed;
-            this.label1.Location = new System.Drawing.Point(12, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 54);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "0 s";
-            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
@@ -163,7 +151,6 @@
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(1289, 573);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.subbutton2);
             this.Controls.Add(this.sublabel3);
             this.Controls.Add(this.sublabel1);
@@ -193,7 +180,6 @@
         private System.Windows.Forms.Label sublabel1;
         private System.Windows.Forms.Label sublabel3;
         private System.Windows.Forms.Button subbutton2;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
     }
 }

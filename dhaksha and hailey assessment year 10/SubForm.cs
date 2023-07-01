@@ -25,10 +25,12 @@ namespace dhaksha_and_hailey_assessment_year_10
 
         int time = 0;
 
+       
+
         System.Media.SoundPlayer pop = new System.Media.SoundPlayer(Properties.Resources.popSound);
         System.Media.SoundPlayer cheer = new System.Media.SoundPlayer(Properties.Resources.cheeringSound);
-
-        List<PictureBox> mushrooms = new List<PictureBox>() 
+        Label timelabel = new Label();
+        List<PictureBox> mushrooms = new List<PictureBox>()
         {
             new mushroom(1), //1
             new mushroom(2), //2
@@ -59,7 +61,15 @@ namespace dhaksha_and_hailey_assessment_year_10
             sublabel4.Visible = false;
             subtextBox1.Visible = false;
             subbutton1.Visible = true;
-            label1.Visible = false;
+
+
+            Controls.Add(timelabel);
+
+            timelabel.Visible = false;
+            timelabel.Size = new Size(77, 54);
+            timelabel.Text = "";
+            timelabel.Location = new Point(12, 9);
+
             sublabel1.Text = "";
             time = 0;
             subbutton1.Text = "start";
@@ -70,15 +80,22 @@ namespace dhaksha_and_hailey_assessment_year_10
             t.Interval = 1000;
             t.Enabled = false;
             t.Tick += timer_Tick;
+            
         }
 
         private void timer_Tick(object sender, EventArgs e)
         {
             time = time + 1;
-            label1.Text = Convert.ToString(time) + " s";
+
+            timelabel.Text = Convert.ToString(time) + " s";
+           
         }
 
-        private void subbutton1_Click(object sender, EventArgs e) 
+        
+
+
+
+        private void subbutton1_Click(object sender, EventArgs e)
         {
             if (buttonFunc == 0) //start game
             {
@@ -89,7 +106,7 @@ namespace dhaksha_and_hailey_assessment_year_10
                 sublabel4.Visible = true;
                 sublabel3.Visible = false;
                 subtextBox1.Visible = true;
-                label1.Visible = true;
+                timelabel.Visible = true;
                 foreach (PictureBox mush in mushrooms)
                 {
                     mush.Visible = true;
@@ -98,6 +115,8 @@ namespace dhaksha_and_hailey_assessment_year_10
                 subbutton1.Text = "Check";
                 buttonFunc = 1;
                 t.Enabled = true;
+
+
 
             }
 
@@ -123,7 +142,7 @@ namespace dhaksha_and_hailey_assessment_year_10
                 mushroomChange();
                 sublabel1.Text = "Correct!";
                 subtextBox1.Text = "";
-                    
+
 
                 makeQuestion();
             }
@@ -132,7 +151,7 @@ namespace dhaksha_and_hailey_assessment_year_10
                 sublabel1.Text = "Incorrect, Try Again";
             }
         }
-        public void makeQuestion() 
+        public void makeQuestion()
         {
             subnumber1.Text = Convert.ToString(rnd.Next(0, 8));
             subnumber2.Text = Convert.ToString(rnd.Next(0, 8));
@@ -142,7 +161,7 @@ namespace dhaksha_and_hailey_assessment_year_10
 
         public async Task mushroomChange() //change mushroom into gnome
         {
-            mushrooms[count].Image = Properties.Resources.explosion;            
+            mushrooms[count].Image = Properties.Resources.explosion;
             pop.Play();
             await Task.Delay(250);
             mushrooms[count].Image = Properties.Resources.gnome;
@@ -153,7 +172,7 @@ namespace dhaksha_and_hailey_assessment_year_10
                 foreach (PictureBox mush in mushrooms)
                 {
                     mush.Image = Properties.Resources.smilingGnome;
-                    mush.Size=new Size(150,150);
+                    mush.Size = new Size(150, 150);
                 }
                 subnumber1.Visible = false;
                 subnumber2.Visible = false;
@@ -166,13 +185,51 @@ namespace dhaksha_and_hailey_assessment_year_10
                 sublabel3.Visible = true;
                 t.Enabled = false;
                 cheer.Play();
-                sublabel3.Text = "Well done! You've finished with a time of "+Convert.ToString(time)+"seconds!";
+                sublabel3.Text = "Well done! You've finished with a time of " + Convert.ToString(time) + "seconds!";
+                if (time > 0 && time < 11)
+                {
+                    MyGlobals.Score = MyGlobals.Score + 10;
+                    Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                    Properties.Settings.Default.Save();
+                }
+                else if (time > 10 && time < 16)
+                {
+                    MyGlobals.Score = MyGlobals.Score + 7;
+                    Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                    Properties.Settings.Default.Save();
+                }
+                else if (time > 15 && time < 21)
+                {
+                    MyGlobals.Score = MyGlobals.Score + 5;
+                    Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                    Properties.Settings.Default.Save();
+                }
+                else if (time > 20 && time < 26)
+                {
+                    MyGlobals.Score = MyGlobals.Score + 3;
+                    Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                    Properties.Settings.Default.Save();
+                }
+                else if (time > 25 && time < 31)
+                {
+                    MyGlobals.Score = MyGlobals.Score + 2;
+                    Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                    Properties.Settings.Default.Save();
+                }
+                else
+                {
+                    MyGlobals.Score = MyGlobals.Score + 1;
+                    Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                    Properties.Settings.Default.Save();
+
+                }
+
             }
         }
 
         private void subbutton2_Click(object sender, EventArgs e) //home button
         {
-          Index index = new Index();
+            Index index = new Index();
             index.Show();
             this.Hide();
         }
@@ -191,12 +248,16 @@ namespace dhaksha_and_hailey_assessment_year_10
             sublabel4.Visible = false;
             subtextBox1.Visible = false;
             subbutton1.Visible = true;
-            label1.Visible = false;
+            timelabel.Visible = false;
             sublabel1.Text = "";
             time = 0;
             subbutton1.Text = "start";
             buttonFunc = 0;
             sublabel3.Text = "click the button to";
         }
+        
     }
 }
+
+
+

@@ -38,6 +38,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
+            this.score = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -149,11 +150,21 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // score
+            // 
+            this.score.AutoSize = true;
+            this.score.Location = new System.Drawing.Point(45, 47);
+            this.score.Name = "score";
+            this.score.Size = new System.Drawing.Size(92, 25);
+            this.score.TabIndex = 10;
+            this.score.Text = "Score: 0";
+            // 
             // Index
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.MediumPurple;
             this.ClientSize = new System.Drawing.Size(1324, 687);
+            this.Controls.Add(this.score);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -185,6 +196,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Label score;
     }
 }
 

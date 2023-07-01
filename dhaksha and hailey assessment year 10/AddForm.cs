@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static dhaksha_and_hailey_assessment_year_10.AddForm;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 
 namespace dhaksha_and_hailey_assessment_year_10
 {
@@ -23,12 +24,17 @@ namespace dhaksha_and_hailey_assessment_year_10
         Bunny Mybunny;
         int locx = 1;
         int locx2 = 1;
-
         
+        int time = 0;
+        System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
+        Timer addtimer;
+
+
         public AddForm()
         {
             InitializeComponent();
             SetUpGame();
+            
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -42,6 +48,20 @@ namespace dhaksha_and_hailey_assessment_year_10
             Controls.Add(Mybunny); // adding bunnies for game
             this.Mybunny.MouseHover += new System.EventHandler(this.Mybunny_MouseHover);
             this.Mybunny.MouseLeave += new System.EventHandler(this.Mybunny_MouseLeave);
+
+          
+
+            //set up timer
+            t.Interval = 1000;
+            t.Enabled = true;
+            t.Tick += timer_Tick;
+
+        }
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            time = time + 1;
+
+            timelabel.Text = Convert.ToString(time) + " s";
         }
 
         private void CheckAnswer(object sender, EventArgs e)
@@ -76,15 +96,52 @@ namespace dhaksha_and_hailey_assessment_year_10
             Controls.Clear(); // Clears the form controls
 
             Label wellDoneLabel = new Label();
-            wellDoneLabel.Text = "Well done your final score is " + score;
+            wellDoneLabel.Text = "Well done you finished with a time of " + time + " seconds!";
             wellDoneLabel.AutoSize = true;
-            wellDoneLabel.Location = new Point(200, 200);
-            wellDoneLabel.Font = new System.Drawing.Font("Kristen ITC", 40, System.Drawing.FontStyle.Bold);
+            wellDoneLabel.Location = new Point(75, 200);
+            wellDoneLabel.Font = new System.Drawing.Font("Kristen ITC", 30, System.Drawing.FontStyle.Bold);
 
             Controls.Add(wellDoneLabel); ;
             Controls.Add (restartbutton); ; //prints a label to show end of game
             SoundPlayer cheering = new SoundPlayer(Properties.Resources.cheeringSound);
             cheering.Play();
+            timelabel.Visible = false;
+            if (time > 0 && time < 11)
+            {
+                MyGlobals.Score = MyGlobals.Score + 10;
+                Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                Properties.Settings.Default.Save();
+            }
+            else if (time > 10 && time < 16)
+            {
+                MyGlobals.Score = MyGlobals.Score + 7;
+                Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                Properties.Settings.Default.Save();
+            }
+            else if (time > 15 && time < 21)
+            {
+                MyGlobals.Score = MyGlobals.Score + 5;
+                Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                Properties.Settings.Default.Save();
+            }
+            else if (time > 20 && time < 26)
+            {
+                MyGlobals.Score = MyGlobals.Score + 3;
+                Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                Properties.Settings.Default.Save();
+            }
+            else if (time > 25 && time < 31)
+            {
+                MyGlobals.Score = MyGlobals.Score + 2;
+                Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                MyGlobals.Score = MyGlobals.Score + 1;
+                Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                Properties.Settings.Default.Save();
+            }
 
 
 
@@ -109,10 +166,7 @@ namespace dhaksha_and_hailey_assessment_year_10
                 lblStatus.Text = "Correct";
                 lblStatus.ForeColor = Color.Green; //checking  user's answer
 
-                score += 1;
-
-                lblScore.Text = "Score: " + score; //adding to score
-
+              
 
                 if (locx > 350)
                 {
@@ -152,7 +206,7 @@ namespace dhaksha_and_hailey_assessment_year_10
             if (locx2 > 350)
             {
                 x = 0;
-                StopGame();
+                
             }
             else
             {
@@ -188,6 +242,7 @@ namespace dhaksha_and_hailey_assessment_year_10
         private void lblhoverinst_MouseLeave(object sender, EventArgs e)
         {
             lblhoverinst.Text = "Hover for Instructions";
+            
         }
 
         private void mybunny_MouseHover (object sender, EventArgs e)

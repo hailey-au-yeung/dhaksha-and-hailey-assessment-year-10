@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddForm));
-            this.lblScore = new System.Windows.Forms.Label();
             this.lblNumA = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lblNumB = new System.Windows.Forms.Label();
@@ -41,18 +40,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblhoverbunnies = new System.Windows.Forms.Label();
             this.lblhoverinst = new System.Windows.Forms.Label();
+            this.timelabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblScore
-            // 
-            this.lblScore.AutoSize = true;
-            this.lblScore.ForeColor = System.Drawing.Color.Maroon;
-            this.lblScore.Location = new System.Drawing.Point(35, 35);
-            this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(98, 29);
-            this.lblScore.TabIndex = 0;
-            this.lblScore.Text = "Score: 0";
             // 
             // lblNumA
             // 
@@ -172,11 +162,21 @@
             this.lblhoverinst.MouseLeave += new System.EventHandler(this.lblhoverinst_MouseLeave);
             this.lblhoverinst.MouseHover += new System.EventHandler(this.lblhoverinst_MouseHover);
             // 
+            // timelabel
+            // 
+            this.timelabel.AutoSize = true;
+            this.timelabel.Location = new System.Drawing.Point(70, 57);
+            this.timelabel.Name = "timelabel";
+            this.timelabel.Size = new System.Drawing.Size(42, 29);
+            this.timelabel.TabIndex = 12;
+            this.timelabel.Text = "0 s";
+            // 
             // AddForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(1249, 667);
+            this.Controls.Add(this.timelabel);
             this.Controls.Add(this.lblhoverbunnies);
             this.Controls.Add(this.lblhoverinst);
             this.Controls.Add(this.restartbutton);
@@ -188,7 +188,6 @@
             this.Controls.Add(this.lblNumB);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblNumA);
-            this.Controls.Add(this.lblScore);
             this.Font = new System.Drawing.Font("Kristen ITC", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "AddForm";
@@ -202,8 +201,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblScore;
         private System.Windows.Forms.Label lblNumA;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblNumB;
@@ -215,6 +212,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblhoverbunnies;
         private System.Windows.Forms.Label lblhoverinst;
+        private System.Windows.Forms.Label timelabel;
     }
 }
 

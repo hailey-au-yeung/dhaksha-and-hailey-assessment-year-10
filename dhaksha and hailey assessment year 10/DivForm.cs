@@ -149,6 +149,7 @@ namespace dhaksha_and_hailey_assessment_year_10
 
                 }
                 
+                
             }
             else
             {
@@ -162,7 +163,12 @@ namespace dhaksha_and_hailey_assessment_year_10
                 questionNo = 1;
                 divlabel3.Text = "";
                 divlabel2.Visible = false;
+
+                MyGlobals.Score = MyGlobals.Score + score;
+                Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                Properties.Settings.Default.Save();
             }
+            
         }
 
         private void DivForm_Load(object sender, EventArgs e)
