@@ -25,6 +25,10 @@ namespace dhaksha_and_hailey_assessment_year_10
 
         int count = 0;
 
+        int time = 0;
+
+        System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
+
         System.Media.SoundPlayer pop = new System.Media.SoundPlayer(Properties.Resources.popSound);
         System.Media.SoundPlayer cheer = new System.Media.SoundPlayer(Properties.Resources.cheeringSound);
 
@@ -54,16 +58,16 @@ namespace dhaksha_and_hailey_assessment_year_10
             sublabel4.Visible = false;
             subtextBox1.Visible = false;
             subbutton1.Visible = true;
-            sublabel1.Text = "";
-            System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
+            sublabel1.Text = "";            
             t.Interval = 1000;
             t.Enabled = false;
-            t.Tick +=timer_Tick();
+            t.Tick += timer_Tick;
         }
 
-        private EventHandler timer_Tick()
+        private void timer_Tick(object sender, EventArgs e)
         {
-
+            time = time + 1;
+            label1.Text = Convert.ToString(time) + " s";
         }
 
         private void subbutton1_Click(object sender, EventArgs e) 
@@ -83,6 +87,7 @@ namespace dhaksha_and_hailey_assessment_year_10
                 makeQuestion();
                 subbutton1.Text = "Check";
                 buttonFunc = 1;
+                t.Enabled = true;
 
             }
 
@@ -149,14 +154,15 @@ namespace dhaksha_and_hailey_assessment_year_10
                 subbutton1.Visible = false;
                 subbutton2.Visible = true;
                 sublabel3.Visible = true;
+                t.Enabled = false;
                 cheer.Play();
-                sublabel3.Text = "Well done! You've finished :)";
+                sublabel3.Text = "Well done! You've finished with a time of "+Convert.ToString(time)+"seconds!";
             }
         }
 
         private void subbutton2_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            this.Close();
         }
     }
 }

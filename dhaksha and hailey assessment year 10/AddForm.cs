@@ -39,14 +39,9 @@ namespace dhaksha_and_hailey_assessment_year_10
 
 
             Mybunny = new Bunny(8);
-            Controls.Add(Mybunny); // adding cars for game
+            Controls.Add(Mybunny); // adding bunnies for game
             this.Mybunny.MouseHover += new System.EventHandler(this.Mybunny_MouseHover);
             this.Mybunny.MouseLeave += new System.EventHandler(this.Mybunny_MouseLeave);
-
-
-
-
-
         }
 
         private void CheckAnswer(object sender, EventArgs e)
@@ -55,16 +50,12 @@ namespace dhaksha_and_hailey_assessment_year_10
             {
                 MessageBox.Show("Please Enter Only Numbers!");
                 txtAnswer.Text = txtAnswer.Text.Remove(txtAnswer.Text.Length - 1); // ensuring only numbers are inputed
-
             }
-
-
         }
 
         private void CheckButtonClickEvent(object sender, EventArgs e)
         {
-            checkanswer();
-            
+            checkanswer();            
         }
 
         private void SetUpGame()
