@@ -6,6 +6,7 @@ using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Media;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,7 +25,11 @@ namespace dhaksha_and_hailey_assessment_year_10
         Bunny Mybunny;
         int locx = 1;
         int locx2 = 1;
+        int pointsadded = 0;
         
+
+
+
         int time = 0;
         System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
         Timer addtimer;
@@ -49,7 +54,7 @@ namespace dhaksha_and_hailey_assessment_year_10
             this.Mybunny.MouseHover += new System.EventHandler(this.Mybunny_MouseHover);
             this.Mybunny.MouseLeave += new System.EventHandler(this.Mybunny_MouseLeave);
 
-          
+            points.Visible = false;
 
             //set up timer
             t.Interval = 1000;
@@ -93,56 +98,65 @@ namespace dhaksha_and_hailey_assessment_year_10
 
         private void StopGame()
         {
-            Controls.Clear(); // Clears the form controls
 
-            Label wellDoneLabel = new Label();
-            wellDoneLabel.Text = "Well done you finished with a time of " + time + " seconds!";
-            wellDoneLabel.AutoSize = true;
-            wellDoneLabel.Location = new Point(75, 200);
-            wellDoneLabel.Font = new System.Drawing.Font("Kristen ITC", 30, System.Drawing.FontStyle.Bold);
-
-            Controls.Add(wellDoneLabel); ;
-            Controls.Add (restartbutton); ; //prints a label to show end of game
-            SoundPlayer cheering = new SoundPlayer(Properties.Resources.cheeringSound);
-            cheering.Play();
-            timelabel.Visible = false;
             if (time > 0 && time < 11)
             {
                 MyGlobals.Score = MyGlobals.Score + 10;
                 Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                 Properties.Settings.Default.Save();
+                pointsadded = 10;
             }
             else if (time > 10 && time < 16)
             {
                 MyGlobals.Score = MyGlobals.Score + 7;
                 Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                 Properties.Settings.Default.Save();
+                pointsadded = 7;
             }
             else if (time > 15 && time < 21)
             {
                 MyGlobals.Score = MyGlobals.Score + 5;
                 Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                 Properties.Settings.Default.Save();
+                pointsadded = 5;
             }
             else if (time > 20 && time < 26)
             {
                 MyGlobals.Score = MyGlobals.Score + 3;
                 Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                 Properties.Settings.Default.Save();
+                pointsadded = 3; ;
             }
             else if (time > 25 && time < 31)
             {
                 MyGlobals.Score = MyGlobals.Score + 2;
                 Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                 Properties.Settings.Default.Save();
+                pointsadded = 2;
             }
             else
             {
                 MyGlobals.Score = MyGlobals.Score + 1;
                 Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                 Properties.Settings.Default.Save();
+                pointsadded = 1;
             }
 
+            Controls.Clear(); // Clears the form controls
+
+            System.Windows.Forms.Label wellDoneLabel = new System.Windows.Forms.Label();
+            wellDoneLabel.Text = "Well done you finished with a time of " + time + " seconds and " + pointsadded + " points";
+            wellDoneLabel.AutoSize = true;
+            wellDoneLabel.Location = new Point(50, 200);
+            wellDoneLabel.Font = new System.Drawing.Font("Kristen ITC", 25, System.Drawing.FontStyle.Bold);
+
+            Controls.Add(wellDoneLabel); ;
+            Controls.Add (restartbutton); ; //prints a label to show end of game
+            SoundPlayer cheering = new SoundPlayer(Properties.Resources.cheeringSound);
+            cheering.Play();
+            timelabel.Visible = false;
+            points.Visible = true;
+           
 
 
         }
@@ -266,6 +280,6 @@ namespace dhaksha_and_hailey_assessment_year_10
             lblhoverbunnies.Text = "Hover Over the Bunnies!";
         }
 
-       
+              
     }
 }

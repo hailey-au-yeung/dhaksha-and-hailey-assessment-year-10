@@ -35,6 +35,7 @@ namespace dhaksha_and_hailey_assessment_year_10
         int time = 0;
         System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
         Timer addtimer;
+        int pointsadded = 0;
         public MultForm()
         {
             InitializeComponent();
@@ -145,50 +146,58 @@ namespace dhaksha_and_hailey_assessment_year_10
 
         private void StopGame()
         {
-            Controls.Clear(); // Clears the form controls
-
-            Label wellDoneLabel = new Label();
-            wellDoneLabel.Text = "Well done you finished the picture in " + time + " seconds!";
-            wellDoneLabel.AutoSize = true;
-            wellDoneLabel.Font = new System.Drawing.Font("Kristen ITC", 35, System.Drawing.FontStyle.Bold);
-            wellDoneLabel.Location = new Point(50, 75);
-
             if (time > 0 && time < 11)
             {
                 MyGlobals.Score = MyGlobals.Score + 10;
                 Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                 Properties.Settings.Default.Save();
+                pointsadded = 10;
             }
             else if (time > 10 && time < 16)
             {
                 MyGlobals.Score = MyGlobals.Score + 7;
                 Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                 Properties.Settings.Default.Save();
+                pointsadded = 7;
             }
             else if (time > 15 && time < 21)
             {
                 MyGlobals.Score = MyGlobals.Score + 5;
                 Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                 Properties.Settings.Default.Save();
+                pointsadded = 5;
             }
             else if (time > 20 && time < 26)
             {
                 MyGlobals.Score = MyGlobals.Score + 3;
                 Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                 Properties.Settings.Default.Save();
+                pointsadded = 3; ;
             }
             else if (time > 25 && time < 31)
             {
                 MyGlobals.Score = MyGlobals.Score + 2;
                 Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                 Properties.Settings.Default.Save();
+                pointsadded = 2;
             }
             else
             {
                 MyGlobals.Score = MyGlobals.Score + 1;
                 Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                 Properties.Settings.Default.Save();
+                pointsadded = 1;
             }
+
+            Controls.Clear(); // Clears the form controls
+
+            Label wellDoneLabel = new Label();
+            wellDoneLabel.Text = "Well done you finished the picture in " + time + " seconds and "+ pointsadded + " points!";
+            wellDoneLabel.AutoSize = true;
+            wellDoneLabel.Font = new System.Drawing.Font("Kristen ITC", 20, System.Drawing.FontStyle.Bold);
+            wellDoneLabel.Location = new Point(50, 75);
+
+          
 
             if (decidingno == 1)
             {

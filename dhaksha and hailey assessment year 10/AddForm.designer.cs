@@ -41,6 +41,7 @@
             this.lblhoverbunnies = new System.Windows.Forms.Label();
             this.lblhoverinst = new System.Windows.Forms.Label();
             this.timelabel = new System.Windows.Forms.Label();
+            this.points = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,11 +172,20 @@
             this.timelabel.TabIndex = 12;
             this.timelabel.Text = "0 s";
             // 
+            // points
+            // 
+            this.points.AutoSize = true;
+            this.points.Location = new System.Drawing.Point(150, 446);
+            this.points.Name = "points";
+            this.points.Size = new System.Drawing.Size(0, 29);
+            this.points.TabIndex = 13;
+            // 
             // AddForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(1249, 667);
+            this.Controls.Add(this.points);
             this.Controls.Add(this.timelabel);
             this.Controls.Add(this.lblhoverbunnies);
             this.Controls.Add(this.lblhoverinst);
@@ -213,6 +223,7 @@
         private System.Windows.Forms.Label lblhoverbunnies;
         private System.Windows.Forms.Label lblhoverinst;
         private System.Windows.Forms.Label timelabel;
+        private System.Windows.Forms.Label points;
     }
 }
 
