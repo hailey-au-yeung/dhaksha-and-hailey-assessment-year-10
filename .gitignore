@@ -7,6 +7,10 @@
 *.rsuser
 *.suo
 *.user
+_ReSharper.*
+bin
+obj
+packages
 *.userosscache
 *.sln.docstates
 
@@ -97,6 +101,7 @@ StyleCopReport.xml
 *.pidb
 *.svclog
 *.scc
+
 
 # Chutzpah Test files
 _Chutzpah*
