@@ -166,7 +166,7 @@ namespace dhaksha_and_hailey_assessment_year_10
                 label1.Visible = true;
 
                 MyGlobals.Score = MyGlobals.Score + score;
-                label1.Text = Convert.ToString(score);
+                label1.Text = Convert.ToString(score)+" Points";
                 Properties.Settings.Default.Score = MyGlobals.Score.ToString();
                 Properties.Settings.Default.Save();
             }
