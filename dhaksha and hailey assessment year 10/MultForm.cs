@@ -192,7 +192,7 @@ namespace dhaksha_and_hailey_assessment_year_10
             Controls.Clear(); // Clears the form controls
 
             Label wellDoneLabel = new Label();
-            wellDoneLabel.Text = "Well done you finished the picture in " + time + " seconds and "+ pointsadded + " points!";
+            wellDoneLabel.Text = "Well done you finished the picture in " + time + " seconds and got "+ pointsadded + " points!";
             wellDoneLabel.AutoSize = true;
             wellDoneLabel.Font = new System.Drawing.Font("Kristen ITC", 20, System.Drawing.FontStyle.Bold);
             wellDoneLabel.Location = new Point(50, 75);
