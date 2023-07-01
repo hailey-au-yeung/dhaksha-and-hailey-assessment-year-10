@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.TaskbarClock;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace dhaksha_and_hailey_assessment_year_10
@@ -31,6 +32,9 @@ namespace dhaksha_and_hailey_assessment_year_10
         picture pic8;
         picture pic9; ////naming all of the global variables
         int decidingno = 0;
+        int time = 0;
+        System.Windows.Forms.Timer t = new System.Windows.Forms.Timer();
+        Timer addtimer;
         public MultForm()
         {
             InitializeComponent();
@@ -144,11 +148,48 @@ namespace dhaksha_and_hailey_assessment_year_10
             Controls.Clear(); // Clears the form controls
 
             Label wellDoneLabel = new Label();
-            wellDoneLabel.Text = "Well done you finished the picture!";
+            wellDoneLabel.Text = "Well done you finished the picture in " + time + " seconds!";
             wellDoneLabel.AutoSize = true;
             wellDoneLabel.Font = new System.Drawing.Font("Kristen ITC", 35, System.Drawing.FontStyle.Bold);
             wellDoneLabel.Location = new Point(50, 75);
-            
+
+            if (time > 0 && time < 11)
+            {
+                MyGlobals.Score = MyGlobals.Score + 10;
+                Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                Properties.Settings.Default.Save();
+            }
+            else if (time > 10 && time < 16)
+            {
+                MyGlobals.Score = MyGlobals.Score + 7;
+                Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                Properties.Settings.Default.Save();
+            }
+            else if (time > 15 && time < 21)
+            {
+                MyGlobals.Score = MyGlobals.Score + 5;
+                Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                Properties.Settings.Default.Save();
+            }
+            else if (time > 20 && time < 26)
+            {
+                MyGlobals.Score = MyGlobals.Score + 3;
+                Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                Properties.Settings.Default.Save();
+            }
+            else if (time > 25 && time < 31)
+            {
+                MyGlobals.Score = MyGlobals.Score + 2;
+                Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                MyGlobals.Score = MyGlobals.Score + 1;
+                Properties.Settings.Default.Score = MyGlobals.Score.ToString();
+                Properties.Settings.Default.Save();
+            }
+
             if (decidingno == 1)
             {
                 PictureBox finalpicturebox = new PictureBox();
@@ -189,7 +230,6 @@ namespace dhaksha_and_hailey_assessment_year_10
 
                 score += 1;
 
-                lblscore.Text = "Score: " + score; //check if answer is correct
 
                 SetUpGame();
                 PictureBoxInput();
@@ -226,7 +266,19 @@ namespace dhaksha_and_hailey_assessment_year_10
         private void Form1_Load(object sender, EventArgs e)
         {
             decidingno = rnd.Next(1, 3); //randomly decides num
+                                         //set up timer
+            t.Interval = 1000;
+            t.Enabled = true;
+            t.Tick += timer_Tick;
+
         }
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            time = time + 1;
+
+            lblscore.Text = Convert.ToString(time) + " s";
+        }
+    
 
         private void lblhoverinst_MouseHover(object sender, EventArgs e)
         {

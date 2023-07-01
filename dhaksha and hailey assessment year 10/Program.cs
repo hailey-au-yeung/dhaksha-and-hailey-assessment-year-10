@@ -16,7 +16,7 @@ namespace dhaksha_and_hailey_assessment_year_10
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginForm());
+            Application.Run(new Index());
         }
     }
 }

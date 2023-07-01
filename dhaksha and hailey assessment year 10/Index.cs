@@ -23,6 +23,8 @@ namespace dhaksha_and_hailey_assessment_year_10
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            score.Text = "Score: " + Properties.Settings.Default.Score;
+         
 
         }
 
@@ -57,6 +59,18 @@ namespace dhaksha_and_hailey_assessment_year_10
         private void button5_Click(object sender, EventArgs e)
         {
             Application.Exit();
+
         }
+
+       
     }
+
 }
+public static class MyGlobals
+{
+    public static int Score;
+
+    
+}
+
+
