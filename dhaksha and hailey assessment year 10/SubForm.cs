@@ -60,8 +60,12 @@ namespace dhaksha_and_hailey_assessment_year_10
             subtextBox1.Visible = false;
             subbutton1.Visible = true;
             label1.Visible = false;
-            sublabel1.Text = "";  
-            
+            sublabel1.Text = "";
+            time = 0;
+            subbutton1.Text = "start";
+            buttonFunc = 0;
+            sublabel3.Text = "click the button to";
+
             //set up timer
             t.Interval = 1000;
             t.Enabled = false;
@@ -85,6 +89,7 @@ namespace dhaksha_and_hailey_assessment_year_10
                 sublabel4.Visible = true;
                 sublabel3.Visible = false;
                 subtextBox1.Visible = true;
+                label1.Visible = true;
                 foreach (PictureBox mush in mushrooms)
                 {
                     mush.Visible = true;
@@ -172,7 +177,24 @@ namespace dhaksha_and_hailey_assessment_year_10
 
         private void button1_Click(object sender, EventArgs e) //play again button
         {
-
+            //sets screen back up to beginning
+            foreach (PictureBox mush in mushrooms)
+            {
+                mush.Visible = false;
+                mush.Image = Properties.Resources.mushroom;
+            }
+            subnumber1.Visible = false;
+            subnumber2.Visible = false;
+            sublabel2.Visible = false;
+            sublabel4.Visible = false;
+            subtextBox1.Visible = false;
+            subbutton1.Visible = true;
+            label1.Visible = false;
+            sublabel1.Text = "";
+            time = 0;
+            subbutton1.Text = "start";
+            buttonFunc = 0;
+            sublabel3.Text = "click the button to";
         }
     }
 }

@@ -54,7 +54,7 @@
             this.lblScore.ForeColor = System.Drawing.Color.Maroon;
             this.lblScore.Location = new System.Drawing.Point(35, 35);
             this.lblScore.Name = "lblScore";
-            this.lblScore.Size = new System.Drawing.Size(52, 16);
+            this.lblScore.Size = new System.Drawing.Size(98, 29);
             this.lblScore.TabIndex = 0;
             this.lblScore.Text = "Score: 0";
             // 
@@ -64,7 +64,7 @@
             this.lblNumA.Font = new System.Drawing.Font("Kristen ITC", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNumA.Location = new System.Drawing.Point(101, 89);
             this.lblNumA.Name = "lblNumA";
-            this.lblNumA.Size = new System.Drawing.Size(56, 42);
+            this.lblNumA.Size = new System.Drawing.Size(106, 80);
             this.lblNumA.TabIndex = 1;
             this.lblNumA.Text = "00";
             // 
@@ -74,7 +74,7 @@
             this.label3.Font = new System.Drawing.Font("Kristen ITC", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(203, 89);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(36, 42);
+            this.label3.Size = new System.Drawing.Size(67, 80);
             this.label3.TabIndex = 2;
             this.label3.Text = "+";
             // 
@@ -85,7 +85,7 @@
             this.lblNumB.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblNumB.Location = new System.Drawing.Point(282, 89);
             this.lblNumB.Name = "lblNumB";
-            this.lblNumB.Size = new System.Drawing.Size(56, 42);
+            this.lblNumB.Size = new System.Drawing.Size(106, 80);
             this.lblNumB.TabIndex = 3;
             this.lblNumB.Text = "00";
             // 
@@ -95,7 +95,7 @@
             this.label5.Font = new System.Drawing.Font("Kristen ITC", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(385, 89);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(36, 42);
+            this.label5.Size = new System.Drawing.Size(67, 80);
             this.label5.TabIndex = 4;
             this.label5.Text = "=";
             // 
@@ -106,7 +106,7 @@
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.lblStatus.Location = new System.Drawing.Point(106, 206);
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(74, 23);
+            this.lblStatus.Size = new System.Drawing.Size(146, 44);
             this.lblStatus.TabIndex = 5;
             this.lblStatus.Text = "Correct";
             // 
@@ -115,14 +115,14 @@
             this.txtAnswer.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAnswer.Location = new System.Drawing.Point(459, 89);
             this.txtAnswer.Name = "txtAnswer";
-            this.txtAnswer.Size = new System.Drawing.Size(123, 41);
+            this.txtAnswer.Size = new System.Drawing.Size(123, 74);
             this.txtAnswer.TabIndex = 6;
             this.txtAnswer.TextChanged += new System.EventHandler(this.CheckAnswer);
             this.txtAnswer.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAnswer_KeyDown);
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.BackColor = System.Drawing.Color.LightSteelBlue;
             this.button1.Font = new System.Drawing.Font("Kristen ITC", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(623, 86);
             this.button1.Name = "button1";
@@ -134,12 +134,13 @@
             // 
             // restartbutton
             // 
-            this.restartbutton.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.restartbutton.Location = new System.Drawing.Point(932, 523);
+            this.restartbutton.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.restartbutton.Font = new System.Drawing.Font("Kristen ITC", 12F);
+            this.restartbutton.Location = new System.Drawing.Point(933, 553);
             this.restartbutton.Name = "restartbutton";
             this.restartbutton.Size = new System.Drawing.Size(293, 93);
             this.restartbutton.TabIndex = 8;
-            this.restartbutton.Text = "Restart Game";
+            this.restartbutton.Text = "Home";
             this.restartbutton.UseVisualStyleBackColor = false;
             this.restartbutton.Click += new System.EventHandler(this.restartbutton_Click);
             // 
@@ -159,7 +160,7 @@
             this.lblhoverbunnies.Font = new System.Drawing.Font("Kristen ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblhoverbunnies.Location = new System.Drawing.Point(20, 26);
             this.lblhoverbunnies.Name = "lblhoverbunnies";
-            this.lblhoverbunnies.Size = new System.Drawing.Size(242, 27);
+            this.lblhoverbunnies.Size = new System.Drawing.Size(481, 52);
             this.lblhoverbunnies.TabIndex = 11;
             this.lblhoverbunnies.Text = "Hover Over the Bunnies!";
             // 
@@ -169,7 +170,7 @@
             this.lblhoverinst.Font = new System.Drawing.Font("Kristen ITC", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblhoverinst.Location = new System.Drawing.Point(21, 28);
             this.lblhoverinst.Name = "lblhoverinst";
-            this.lblhoverinst.Size = new System.Drawing.Size(229, 27);
+            this.lblhoverinst.Size = new System.Drawing.Size(457, 52);
             this.lblhoverinst.TabIndex = 10;
             this.lblhoverinst.Text = "Hover for Instructions!";
             this.lblhoverinst.MouseLeave += new System.EventHandler(this.lblhoverinst_MouseLeave);
@@ -193,7 +194,7 @@
             this.panel2.Size = new System.Drawing.Size(314, 191);
             this.panel2.TabIndex = 13;
             // 
-            // Form1
+            // AddForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
@@ -212,7 +213,7 @@
             this.Controls.Add(this.lblScore);
             this.Font = new System.Drawing.Font("Kristen ITC", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
-            this.Name = "Form1";
+            this.Name = "AddForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Maths Addition Game";
             this.Load += new System.EventHandler(this.Form1_Load);
